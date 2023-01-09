@@ -21,4 +21,11 @@ public class ClientControllerTest {
         mockMvc.perform(get("/client/1"))
                 .andExpect(status().isOk());
     }
+
+    @Test
+    public void testGetClients() throws Exception {
+        mockMvc.perform(get("/clients"))
+                .andExpect(status().isOk());
+    }
+
 }
