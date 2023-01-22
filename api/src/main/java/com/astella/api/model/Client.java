@@ -1,11 +1,11 @@
 package com.astella.api.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import lombok.*;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Data
 @Entity
@@ -22,5 +22,8 @@ public class Client {
     private String email;
 
     private String phonenumber;
+
+    @OneToMany(mappedBy = "client")
+    private Set<Appointment> appointments = new HashSet<>();
 
 }

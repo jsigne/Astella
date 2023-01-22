@@ -31,12 +31,12 @@ public class ClientController {
         return clientService.getClients();
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deleteClient/{id}")
     public void delete(@PathVariable("id") final Long id){
         clientService.deleteClient(id);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/deleteClients")
     public void deleteAll(){
         clientService.deleteClients();
     }
