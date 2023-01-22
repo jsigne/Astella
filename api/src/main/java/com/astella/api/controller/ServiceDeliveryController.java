@@ -18,7 +18,7 @@ public class ServiceDeliveryController {
      * @param serviceDelivery An object ServiceDelivery
      * @return The service object saved
      */
-    @PostMapping("/serviceDelivery")
+    @PostMapping("/service")
     public ServiceDelivery createService(@RequestBody ServiceDelivery serviceDelivery){
         return serviceDeliveryService.saveService(serviceDelivery);
     }

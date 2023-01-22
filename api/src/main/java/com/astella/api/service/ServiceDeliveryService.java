@@ -5,10 +5,12 @@ import com.astella.api.repository.ServiceDeliveryRepository;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 @Data
 @Service
+@Transactional
 public class ServiceDeliveryService {
 
     @Autowired
